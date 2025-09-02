@@ -5,10 +5,10 @@ fetch("/components/nav.html")
 
         // Set active class based on current page
         const navItems = document.querySelectorAll('#nav ul li');
-        const pages = ['/index.html', '/pages/about.html', '/pages/services.html', '/pages/contact.html'];
+        const pages = ['/index.html', './pages/about.html', './pages/services.html', './pages/contact.html'];
         let currentPage = window.location.pathname.split('/').pop();
-        if (currentPage === '' || currentPage === 'index.html') {
-            currentPage = 'index.html';
+        if (currentPage === '' || currentPage === '/index.html') {
+            currentPage = '/index.html';
         }
 
         navItems.forEach((item, idx) => {
