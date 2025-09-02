@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+            z-index: 9;
+            transition: all .3s ease;
+            font-family: poppins, sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-left: 10vw;
+        }
+
+
+        nav .logo {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            /* background: white; */
+        }
+
+        nav .logo img {
+            width: 10%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+        nav .logo h3 {
+            font-size: 2vw;
+            font-weight: 300;
+            margin-left: 5px;
+            color: #08ebfc;
+            font-family: poppins, sans-serif;
+            letter-spacing: 0.4vw;
+        }
+
+        nav .menu-char {
+            width: 40%;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            /* background: wheat; */
+            margin-left: 3vw;
+        }
+
+
+        nav .menu-char ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            margin-left: -20vw;
+            gap: 40px;
+        }
+
+        nav .menu-char ul li {
+            font-size: 1.2vw;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .1s ease;
+            color: white;
+        }
+
+        nav .menu-char ul li:hover {
+            transition: 0.1s ease-in-out;
+            transform: scale(1.05);
+        }
+
+        nav .menu-char ul li.active a {
+            color: #08ebfc;
+        }
+
+        nav .nav-btn button {
+            padding: 5px 30px;
+            border: 2px solid #08ebfc;
+            transform: skewX(-12deg);
+            background: none;
+            cursor: pointer;
+            font-size: 1.2vw;
+            color: white;
+            transition: all .3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: sans-serif;
+            letter-spacing: 0.065vw;
+        }
+
+        nav .nav-btn button::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            background: #08ebfc;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            color: black;
+            transition: all .3s ease;
+            z-index: -1;
+        }
+
+        nav .nav-btn button:hover::after {
+            left: 0;
+            transition: all .3s ease-in-out;
+        }
+
+
+        nav .nav-btn button:hover {
+            color: black;
+            box-shadow: 0 0 10px #08ebfc;
+        }
+
+        .menu-char ul li a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/images/chip.png" alt="">
+            <h3>Cybrix</h3>
+        </div>
+        <div class="menu-char">
+            <ul>
+                <li class=""><a href="/index.html">Home</a></li>
+                <li class="about"><a href="/pages/about.html">About Us</a></li>
+                <li><a href="/pages/service.html">Services</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-btn">
+            <button>Contact</button>
+        </div>
+    </nav>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

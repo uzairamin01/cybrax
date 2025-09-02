@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Dropdown</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+
+    nav {
+      background: #111827; /* Dark background */
+      padding: 15px 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8; /* Sky blue hover */
+    }
+
+    /* Dropdown styling */
+    nav ul li ul {
+      position: absolute;
+      top: 105%;     left: 0;
+      background: #1f2937; /* Slightly lighter dark */
+      display: none;
+      flex-direction: column;
+      min-width: 200px;
+      border-radius: 8px;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    nav ul li ul li {
+      margin: 0;
+    }
+
+    nav ul li ul li a {
+      padding: 10px 20px;
+      display: block;
+      font-size: 15px;
+      color: #d1d5db;
+    }
+
+    nav ul li ul li a:hover {
+      background: #374151;
+      color: #fff;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+
+      <!-- Dropdown -->
+      <li>
+        <a href="#">Services ▾</a>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">SEO Optimization</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Cybersecurity</a></li>
+          <li><a href="#">Maintenance & Support</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

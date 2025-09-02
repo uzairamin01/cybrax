@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        footer {
+            background: #01063e;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 1vw;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 1vw;
+            padding: 0vw 9vw;
+            padding-top: 2vw;
+        }
+
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3vw;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-col {
+            flex: 1 1 300px;
+            min-width: 250px;
+            margin-bottom: 2vw;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-size: 1.3vw;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 0.3vw;
+            margin-bottom: 1vw;
+            font-weight: 600;
+        }
+
+        .footer-text {
+            font-size: 1.1vw;
+            color: #fff;
+            margin-bottom: 1vw;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1vw;
+            margin-top: 0.5vw;
+        }
+
+        .social-link {
+            color: #fff;
+            font-size: 1.7vw;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-link:hover {
+            color: #08ebfc;
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1vw;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.7vw;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .footer-link i {
+            margin-right: 0.5vw;
+            font-size: 1.3vw;
+            color: #08ebfc;
+        }
+
+        .footer-link:hover {
+            color: #08ebfc;
+            transform: translateX(5px);
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.1vw;
+            width: 100%;
+        }
+
+        .footer-contact li {
+            margin-bottom: 0.7vw;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            margin-right: 0.6vw;
+            color: #08ebfc;
+            font-size: 1.3vw;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 1vw 0vw;
+            font-size: 1.2vw;
+            color: #fff;
+            margin-top: 2vw;
+            border-top: 1px solid #fff;
+        }
+
+        @media screen and (max-width: 800px) {
+            .footer-row {
+                flex-direction: column;
+                gap: 2vw;
+            }
+
+            .footer-col {
+                min-width: 0;
+            }
+
+            .footer-heading {
+                font-size: 1.1rem;
+            }
+
+            .footer-text,
+            .footer-link,
+            .footer-contact {
+                font-size: 1rem;
+            }
+
+            .social-link {
+                font-size: 1.3rem;
+            }
+
+            .footer-link i,
+            .footer-contact i {
+                font-size: 1.1rem;
+            }
+
+            .footer-copyright {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ...existing code... */
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <!-- About Section -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">About Us</h5>
+                    <p class="footer-text">
+                        Reliable, scalable, and cost-effective IT services for startups & enterprises. AstraTech
+                        empowers your business with cloud, cybersecurity, and digital transformation.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="lab la-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="lab la-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="lab la-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="lab la-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="lab la-github"></i></a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="home.html" class="footer-link"><i class="las la-angle-right"></i> Home</a></li>
+                        <li><a href="about.html" class="footer-link"><i class="las la-angle-right"></i> About</a></li>
+                        <li><a href="services.html" class="footer-link"><i class="las la-angle-right"></i> Services</a>
+                        </li>
+                        <li><a href="contact.html" class="footer-link"><i class="las la-angle-right"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">Contact</h5>
+                    <ul class="footer-contact">
+                        <li><i class="las la-map-marker"></i> 123 Street, City, Country</li>
+                        <li><i class="las la-phone"></i> +92 300 1234567</li>
+                        <li><i class="las la-envelope"></i> info@astratech.om</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <small>
+                    © <span class="year">2025</span> AstraTech. All rights reserved.
+                </small>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        document.getElementsByClassName("year").innerHTML = new Date().getFullYear();
+
+
+        // Animate footer links on scroll (optional)
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.footer-link').forEach((element) => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.5s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>
