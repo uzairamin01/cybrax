@@ -14,7 +14,7 @@ setInterval(() => {
 }, 5000)
 
 
-fetch("/components/nav.html")
+fetch("./components/nav.html")
     .then(response => response.text())
     .then(data => {
         document.querySelector("#nav").innerHTML = data;
@@ -39,7 +39,7 @@ fetch("/components/nav.html")
         });
     });
 
-fetch("/components/footer.html")
+fetch("./components/footer.html")
     .then(response => response.text())
     .then(data =>
         document.querySelector("#footer").innerHTML = data);
