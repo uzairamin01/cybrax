@@ -14,12 +14,10 @@ setInterval(() => {
 }, 5000)
 
 
-
-
 fetch("/components/nav.html")
     .then(response => response.text())
     .then(data => {
-        document.getElementById("nav").innerHTML = data;
+        document.querySelector("#nav").innerHTML = data;
 
         // Set active class based on current page
         const navItems = document.querySelectorAll('#nav ul li');
@@ -44,7 +42,7 @@ fetch("/components/nav.html")
 fetch("/components/footer.html")
     .then(response => response.text())
     .then(data =>
-        document.getElementById("footer").innerHTML = data);
+        document.querySelector("#footer").innerHTML = data);
 
 
 window.addEventListener('scroll', function () {
