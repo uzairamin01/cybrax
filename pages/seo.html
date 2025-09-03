@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/chip.png" type="image/x-icon">
+    <title>Cybrax</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        #hero img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+        }
+
+        #hero .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: poppins, sans-serif;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text h1 {
+            font-size: 5vw;
+            color: #ddd;
+            width: 100%;
+        }
+
+        .text p {
+            font-size: 1.4vw;
+            text-align: center;
+            color: #ddd;
+            margin-top: -0.5vw;
+        }
+
+        .text1 p,
+        .text2 p,
+        .text3 p,
+        .text4 p {
+            font-size: 1.2vw;
+            font-family: poppins, sans-serif;
+            text-align: justify;
+            line-height: 2.2vw;
+            color: #575454e9;
+        }
+
+        .text1 h1,
+        .text2 h1,
+        .text3 h1,
+        .text4 h1 {
+            font-size: 3vw;
+            font-family: poppins, sans-serif;
+            font-weight: 500;
+            text-align: left;
+            color: #030b61;
+        }
+
+        .text1,
+        .text2,
+        .text3,
+        .text4 {
+            border-bottom: 3px solid #ddd;
+            padding-bottom: 2vw;
+            padding-top: 3vw;
+            width: 80%;
+            margin: auto;
+        }
+
+        .text3 {
+            border: none;
+            margin-bottom: 6vw;
+        }
+
+    </style>
+</head>
+<nav id="nav"></nav>
+
+<body>
+    <section id="hero">
+        <img src="/images/seo.jpg" alt="">
+        <div class="text">
+            <h1>Seo Optimization.</h1>
+            <p>Rank higher. Reach further. Grow faster</p>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="text1">
+            <h1>Strategic Approach to SEO
+            </h1>
+            <p>Our approach to SEO is built on a foundation of strategic analysis and a deep understanding of search
+                engine algorithms. We recognize that effective SEO is more than just keyword stuffing; it's about
+                building a sustainable online presence that generates organic traffic and high-quality leads. Our
+                process begins with a comprehensive audit of your website to identify strengths, weaknesses, and
+                opportunities. We then perform in-depth keyword research to uncover the terms your target audience is
+                actively searching for. By aligning your content strategy with these high-value keywords, we ensure your
+                website not only ranks well but also attracts visitors who are genuinely interested in your products or
+                services.
+            </p>
+
+        </div>
+        <div class="text2">
+            <h1>On-Page and Off-Page Optimization
+            </h1>
+            <p>Our service encompasses both on-page and off-page SEO to create a holistic strategy for your website's
+                success. For on-page optimization, we focus on technical elements like site speed, mobile-friendliness,
+                and a logical site structure. We also meticulously optimize content by fine-tuning meta titles,
+                descriptions, and header tags to improve visibility and click-through rates. Off-page SEO involves
+                building your website’s authority and credibility through high-quality backlinks from reputable sources.
+                We employ ethical link-building strategies and digital PR to increase your domain authority, which
+                signals to search engines that your site is a trusted and valuable resource.
+                Driving Measurable Results
+            </p>
+        </div>
+        <div class="text3">
+            <h1>Driving Measurable Results
+            </h1>
+            <p>The ultimate goal of our SEO services is to deliver tangible and measurable results that directly impact
+                your bottom line. We provide transparent, regular reporting on key metrics such as organic traffic
+                growth, keyword rankings, and lead generation. By continuously monitoring performance and adapting our
+                strategy to algorithm updates and market trends, we ensure your website maintains its competitive edge.
+                We believe in building long-term partnerships, and our commitment is to help you achieve sustainable
+                growth, a stronger brand presence, and a consistent stream of qualified leads from organic search.</p>
+        </div>
+
+
+    </section>
+    <footer id="footer"></footer>
+    <script>
+        fetch('/components/nav.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#nav').innerHTML = data
+            })
+
+        fetch('/components/footer.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#footer').innerHTML = data
+            })
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav')
+            if (window.scrollY > window.innerHeight * 0.3) {
+                nav.classList.add('scrolled')
+            } else {
+                nav.classList.remove('scrolled')
+            }
+        })
+    </script>
+</body>
+
+</html>

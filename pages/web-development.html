@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/chip.png" type="image/x-icon">
+    <title>Cybrax</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        #hero img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+        }
+
+        #hero .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: poppins, sans-serif;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text h1 {
+            font-size: 5vw;
+            color: #ddd;
+            width: 100%;
+        }
+
+        .text p {
+            font-size: 1.4vw;
+            text-align: center;
+            color: #ddd;
+            margin-top: -0.5vw;
+        }
+
+        .text1 p,
+        .text2 p,
+        .text3 p,
+        .text4 p {
+            font-size: 1.2vw;
+            font-family: poppins, sans-serif;
+            text-align: justify;
+            line-height: 2.2vw;
+            color: #575454e9;
+        }
+
+        .text1 h1,
+        .text2 h1,
+        .text3 h1,
+        .text4 h1 {
+            font-size: 3vw;
+            font-family: poppins, sans-serif;
+            font-weight: 500;
+            text-align: left;
+            color: #030b61;
+        }
+
+        .text1,
+        .text2,
+        .text3,
+        .text4 {
+            border-bottom: 3px solid #ddd;
+            padding-bottom: 2vw;
+            padding-top: 3vw;
+            width: 80%;
+            margin: auto;
+        }
+
+        .text4 {
+            border: none;
+            margin-bottom: 6vw;
+        }
+
+        .text4 h1 {
+            line-height: 3.3vw;
+            padding-bottom: 2vw;
+        }
+    </style>
+</head>
+<nav id="nav"></nav>
+
+<body>
+    <section id="hero">
+        <img src="/images/web.jpg" alt="">
+        <div class="text">
+            <h1>Web Development.</h1>
+            <p>websites that work as hard as you do</p>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="text1">
+            <h1>Our Approach to Web Development</h1>
+            <p>Our journey in web development is centered on crafting a powerful and effective digital presence for your
+                business. We believe that a website is your most important digital asset, serving as the central hub for
+                your brand, marketing, and customer interactions. Our approach is to go beyond just building a site; we
+                act as your strategic partner to create a tailored web solution that not only looks great but also
+                performs flawlessly and drives business growth. From the initial discovery phase to design, development,
+                and deployment, we focus on building a site that is scalable, secure, and uniquely designed to meet your
+                specific objectives.
+            </p>
+
+        </div>
+        <div class="text2">
+            <h1>Comprehensive Web Development Services</h1>
+            <p>We offer a full spectrum of web development services to address every need, from simple informational
+                websites to complex, data-driven web applications. Our expertise covers front-end development, using
+                modern frameworks like React, Angular, and Vue.js to create dynamic and engaging user interfaces. For
+                the back-end, we work with robust technologies such as Node.js, Python, and PHP to build the underlying
+                architecture that powers your site, including databases and server logic. We are also specialists in
+                e-commerce development using platforms like Shopify and WooCommerce, and we build custom Content
+                Management Systems (CMS) with WordPress and Drupal, giving you full control over your content.
+            </p>
+        </div>
+        <div class="text3">
+            <h1>A Focus on Performance and Security
+            </h1>
+            <p>We place a high priority on creating websites that are not only visually appealing but also optimized for
+                performance, security, and user experience. Our development process includes rigorous performance
+                optimization to ensure lightning-fast load times, which is crucial for both user satisfaction and search
+                engine rankings. We implement the latest security measures, including SSL certificates and secure coding
+                practices, to protect your site and your users' data from threats. Additionally, every website we build
+                is designed to be fully responsive, ensuring a seamless and intuitive experience for users on any
+                device, from desktops to tablets and smartphones</p>
+        </div>
+
+        <div class="text4">
+            <h1>Delivering Tangible Business Outcomes</h1>
+            <p>The true measure of our success is the measurable impact we create for our clients. We have a proven
+                track record of delivering websites that generate real business results, such as helping a B2B company
+                increase their lead generation by 60% through a redesigned website and enabling an online retailer to
+                boost their conversion rate by 25% by improving the e-commerce checkout flow. We believe in transparency
+                and accountability, and we work closely with you to define key performance indicators (KPIs) from the
+                start. Our long-term partnership approach ensures that your website remains a powerful tool that evolves
+                with your business, continually contributing to your growth and success.</p>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+    <script>
+        fetch('/components/nav.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#nav').innerHTML = data
+            })
+
+        fetch('/components/footer.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#footer').innerHTML = data
+            })
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav')
+            if (window.scrollY > window.innerHeight * 0.3) {
+                nav.classList.add('scrolled')
+            } else {
+                nav.classList.remove('scrolled')
+            }
+        })
+    </script>
+</body>
+
+</html>

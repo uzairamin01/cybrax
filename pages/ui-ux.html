@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/chip.png" type="image/x-icon">
+    <title>Cybrax</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        #hero img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+        }
+
+        #hero .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: poppins, sans-serif;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text h1 {
+            font-size: 5vw;
+            color: #ddd;
+            width: 100%;
+        }
+
+        .text p {
+            font-size: 1.4vw;
+            text-align: center;
+            color: #ddd;
+            margin-top: -0.5vw;
+        }
+
+        .text1 p,
+        .text2 p,
+        .text3 p,
+        .text4 p {
+            font-size: 1.2vw;
+            font-family: poppins, sans-serif;
+            text-align: justify;
+            line-height: 2.2vw;
+            color: #575454e9;
+        }
+
+        .text1 h1,
+        .text2 h1,
+        .text3 h1,
+        .text4 h1 {
+            font-size: 3vw;
+            font-family: poppins, sans-serif;
+            font-weight: 500;
+            text-align: left;
+            color: #030b61;
+        }
+
+        .text1,
+        .text2,
+        .text3,
+        .text4 {
+            border-bottom: 3px solid #ddd;
+            padding-bottom: 2vw;
+            padding-top: 3vw;
+            width: 80%;
+            margin: auto;
+        }
+
+        .text3 {
+            border: none;
+            margin-bottom: 6vw;
+        }
+
+    </style>
+</head>
+<nav id="nav"></nav>
+
+<body>
+    <section id="hero">
+        <img src="/images/ui-ux.jpg" alt="">
+        <div class="text">
+            <h1>UI/UX Design.</h1>
+            <p>Designs that don't just look good, they feel right</p>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="text1">
+            <h1>User-Centered Design Philosophy</h1>
+            <p>Our approach to UI/UX design is rooted in a user-centered philosophy. We believe that a great product is
+                one that not only looks beautiful but also provides a seamless and intuitive experience for its users.
+                Our process begins with a deep dive into understanding your target audience, their behaviors, needs, and
+                pain points. Through extensive research, user interviews, and persona creation, we build a clear picture
+                of who we're designing for. This foundation ensures that every design decision, from the layout and
+                navigation to the smallest button, is made with the user's journey in mind, creating a product that is
+                both delightful to use and highly effective.
+
+            </p>
+
+        </div>
+        <div class="text2">
+            <h1>Crafting Intuitive Interfaces
+            </h1>
+            <p>Our expertise lies in the meticulous craft of both User Interface (UI) and User Experience (UX) design.
+                For UX, we focus on the structure and flow of the product, creating detailed sitemaps, wireframes, and
+                prototypes that map out the user's path. We conduct usability testing to identify and solve potential
+                friction points before any development begins. For UI, our team creates visually stunning and consistent
+                designs that reflect your brand identity. We meticulously select color palettes, typography, and visual
+                elements to create an interface that is not only aesthetically pleasing but also enhances usability and
+                reinforces brand trust.
+            </p>
+        </div>
+
+        <div class="text3">
+            <h1>Driving Engagement and Business Results</h1>
+            <p>The true measure of our design success is the impact it has on your business goals. Our designs are not
+                just about aesthetics; they are strategic tools aimed at increasing user engagement, improving
+                conversion rates, and building customer loyalty. We provide tangible results, such as helping a mobile
+                app reduce its user churn rate by 30% or enabling an e-commerce site to increase its average order value
+                through a redesigned checkout process. By continuously analyzing user data and feedback, we ensure your
+                product's design remains a powerful asset that evolves with your business and delivers a strong return
+                on your investment.</p>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+    <script>
+        fetch('/components/nav.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#nav').innerHTML = data
+            })
+
+        fetch('/components/footer.html')
+            .then(req => req.text())
+            .then(data => {
+                document.querySelector('#footer').innerHTML = data
+            })
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav')
+            if (window.scrollY > window.innerHeight * 0.3) {
+                nav.classList.add('scrolled')
+            } else {
+                nav.classList.remove('scrolled')
+            }
+        })
+    </script>
+</body>
+
+</html>
