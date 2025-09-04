@@ -799,10 +799,10 @@ nav.scrolled {
     #home .home-content h1 {
         font-size: 9vw;
         font-family: Poppins, sans-serif;
-        font-weight: 400;
+        font-weight: 900;
         margin-bottom: 5px;
-        text-align: center;
-        line-height: 8.5vw;
+        text-align: justify;
+        line-height: 10vw;
         text-transform: capitalize;
     }
 
