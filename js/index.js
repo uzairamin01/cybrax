@@ -14,12 +14,34 @@ setInterval(() => {
 }, 5000)
 
 
-fetch("./components/nav.html")
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector("#nav").innerHTML = data;
+fetch('/components/nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.querySelector("nav").innerHTML = data;
 
-    });
+            // Ab JS ko initialize karo
+            initNav();
+        });
+
+    // Function jo event listeners lagata hai
+    function initNav() {
+        const menu = document.querySelector('.mobile-res');
+        const openBtn = document.querySelector('.right-btn button');
+        const closeBtn = document.querySelector('.mobile-res .top i');
+
+        if (openBtn && closeBtn && menu) {
+            openBtn.addEventListener('click', () => {
+                menu.classList.add("show");
+                document.body.style.overflow = "hidden";
+            });
+
+            closeBtn.addEventListener('click', () => {
+                menu.classList.remove("show");
+                document.body.style.overflow = "";
+            });
+        }
+    }
+
 
 fetch("./components/footer.html")
     .then(response => response.text())
@@ -36,10 +58,10 @@ window.addEventListener('scroll', function () {
     }
 });
 
- var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    });
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+});
 
 let nextBtn = document.querySelector("#review .review-top .revtop-right .next").addEventListener("click", () => {
     swiper.slideNext()
