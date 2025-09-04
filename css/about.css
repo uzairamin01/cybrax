@@ -275,4 +275,5 @@ nav.scrolled{
     color: #f7fafd;
     border-radius: 10px;
     margin-top: 1vw;
+    cursor: pointer;
 }
