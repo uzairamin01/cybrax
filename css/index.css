@@ -797,12 +797,12 @@ nav.scrolled {
     }
 
     #home .home-content h1 {
-        font-size: 7vw;
+        font-size: 9vw;
         font-family: Poppins, sans-serif;
         font-weight: 400;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 7.5vw;
+        line-height: 8.5vw;
         text-transform: capitalize;
     }
 
@@ -896,11 +896,11 @@ nav.scrolled {
     }
 
     #home .home-content2 h1 {
-        font-size: 6vw;
+        font-size: 8vw;
         font-weight: 500;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 6.5vw;
+        line-height: 7.5vw;
         font-family: poppins, sans-serif;
 
     }
