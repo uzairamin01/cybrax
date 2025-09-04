@@ -857,8 +857,8 @@ nav.scrolled {
         content: none;
     }
 
-    .b1:hover{
-        color: #000 ;
+    .b1:hover {
+        color: #000;
     }
 
 
@@ -915,6 +915,156 @@ nav.scrolled {
         width: 70%;
         text-align: center;
 
+    }
+
+    /* <-----------------------------------------------------------------------------------> */
+
+    #about {
+        min-height: 40vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #f7fafd;
+        padding-top: 10vw;
+        padding-left: 5vw;
+        overflow-x: hidden;
+
+    }
+
+    .about-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 15vh;
+        width: 100%;
+        padding: 0vw 4vw;
+        font-family: poppins, sans-serif;
+        margin-left: 2vw;
+    }
+
+    .abouttop-left h1 {
+        font-size: 13vw;
+        color: #030b61;
+        margin-left: 7vw;
+    }
+
+    .abouttop-left p {
+        width: 80%;
+        margin-top: -1vw;
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .abouttop-right {
+        padding-top: 2vw;
+        padding-right: 7vw;
+    }
+
+    .abouttop-right button {
+        height: 4vh;
+        width: 17vw;
+        border-radius: 10px;
+        border: none;
+        background: #030b61;
+        color: white;
+        font-size: 2vw;
+        cursor: pointer;
+        margin-left: -12vw;
+        box-shadow: 0 4px 20px rgba(34, 47, 48, 0.3);
+    }
+
+    .about-bottom {
+        min-height: 70vh;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-left {
+        width: 100%;
+        height: 100%;
+        padding: 2vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2vw;
+        position: relative;
+        margin-top: 10vw;
+    }
+
+
+    .about-who,
+    .about-what,
+    .about-vision,
+    .about-mission {
+        width: 50%;
+        padding: 2vw 2vw;
+    }
+
+    .about-vision, .about-mission{
+        margin-top: 5vw;
+    }
+
+    .about-card h1 {
+        font-size: 5vw;
+        font-family: poppins, sans-serif;
+        color: #030b61;
+    }
+
+    .about-who::before {
+        content: '1.';
+        font-size: 7vw;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+        color: #030b61;
+    }
+
+    .about-what::before {
+        content: '2.';
+        font-size: 7vw;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+        color: #030b61;
+    }
+
+    .about-vision::before {
+        content: '3.';
+        font-size: 7vw;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+        color: #030b61;
+    }
+
+    .about-mission::before {
+        content: '4.';
+        font-size: 7vw;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+        color: #030b61;
+    }
+
+
+    .about-card p {
+        font-size: 2.5vw;
+        font-family: poppins, sans-serif;
+        line-height: 3vw;
+        font-weight: 300;
+    }
+
+    .about-right {
+        /* background: #000; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3vw;
+    }
+
+    .about-right img {
+        height: 80%;
+        width: 80%;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
     }
 
 }
