@@ -944,9 +944,9 @@ nav.scrolled {
     }
 
     .abouttop-left h1 {
-        font-size: 13vw;
+        font-size: 15vw;
         color: #030b61;
-        margin-left: 7vw;
+        margin-left: 5vw;
     }
 
     .abouttop-left p {
@@ -954,6 +954,7 @@ nav.scrolled {
         margin-top: -1vw;
         font-size: 2vw;
         text-align: center;
+        font-weight: 500;
     }
 
     .abouttop-right {
@@ -968,10 +969,10 @@ nav.scrolled {
         border: none;
         background: #030b61;
         color: white;
-        font-size: 2vw;
+        font-size: 2.5vw;
         cursor: pointer;
         margin-left: -12vw;
-        box-shadow: 0 4px 20px rgba(34, 47, 48, 0.3);
+        box-shadow: 0 4px 20px rgba(34, 47, 48, 0.2);
     }
 
     .about-bottom {
@@ -1002,7 +1003,7 @@ nav.scrolled {
     }
 
     .about-vision, .about-mission{
-        margin-top: 5vw;
+        margin-top: 8vw;
     }
 
     .about-card h1 {
@@ -1048,7 +1049,8 @@ nav.scrolled {
         font-size: 2.5vw;
         font-family: poppins, sans-serif;
         line-height: 3vw;
-        font-weight: 300;
+        font-weight: 500;
+        text-align: left;
     }
 
     .about-right {
@@ -1058,7 +1060,7 @@ nav.scrolled {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 3vw;
+        margin-top: 7vw;
     }
 
     .about-right img {
