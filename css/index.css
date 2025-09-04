@@ -797,12 +797,12 @@ nav.scrolled {
     }
 
     #home .home-content h1 {
-        font-size: 11vw;
+        font-size: 10vw;
         font-family: Poppins, sans-serif;
         font-weight: 900;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 10vw;
+        line-height: 11vw;
         text-transform: capitalize;
     }
 
@@ -817,7 +817,7 @@ nav.scrolled {
 
     #home .btns {
         position: absolute;
-        top: 48%;
+        top: 52%;
         left: 22%;
         display: flex;
         align-items: center;
@@ -829,7 +829,7 @@ nav.scrolled {
         padding: 10px 20px;
         border: 2px solid #08ebfc;
         cursor: pointer;
-        font-size: 2.5vw;
+        font-size: 3vw;
         font-family: sans-serif;
         transition: all .3s ease;
         transform: skewX(-12deg);
@@ -875,6 +875,7 @@ nav.scrolled {
         background: none;
         color: #000;
         background: #08ebfc;
+        box-shadow: 0 0 10px #08ebfc;
     }
 
     .b2::after {
@@ -889,29 +890,29 @@ nav.scrolled {
         transform: translate(-50%, -50%) rotateY(0deg);
         text-align: center;
         color: white;
-        width: 90%;
+        width: 100%;
         opacity: 0;
         transition: transform 1s ease, opacity 1s ease;
         backface-visibility: hidden;
     }
 
     #home .home-content2 h1 {
-        font-size: 8vw;
-        font-weight: 500;
+        font-size: 9vw;
+        font-weight: 900;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 7.5vw;
+        line-height: 10vw;
         font-family: poppins, sans-serif;
 
     }
 
     #home .home-content2 p {
-        font-size: 2.5vw;
+        font-size: 3vw;
         font-family: sans-serif;
         font-weight: 400;
         margin-bottom: 20px;
         margin: 0 auto;
-        width: 90%;
+        width: 70%;
         text-align: center;
 
     }
