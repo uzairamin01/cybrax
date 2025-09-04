@@ -817,7 +817,7 @@ nav.scrolled {
 
     #home .btns {
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 22%;
         display: flex;
         align-items: center;
@@ -850,25 +850,15 @@ nav.scrolled {
         overflow: hidden;
         box-shadow: 0 0 10px #08ebfc;
         background: none;
+        background: #08ebfc;
     }
 
     .b1::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        background: #08ebfc;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        transition: all .3s ease;
-        z-index: -1;
+        content: none;
     }
 
-    .b1:hover::after {
-        background: none;
-        left: -100%;
-        transition: all .3s ease-in-out;
-        z-index: 1;
+    .b1:hover{
+        color: #000 ;
     }
 
 
@@ -883,32 +873,14 @@ nav.scrolled {
         position: relative;
         overflow: hidden;
         background: none;
-        color: white;
+        color: #000;
+        background: #08ebfc;
     }
 
     .b2::after {
-        content: '';
-        position: absolute;
-        left: -100%;
-        background: #08ebfc;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        transition: all .3s ease;
-        z-index: -1;
+        content: none;
     }
 
-    .b2:hover::after {
-        background: #08ebfc;
-        left: 0%;
-        transition: all .3s ease-in-out;
-        z-index: -1;
-    }
-
-    .b2:hover {
-        color: black;
-        box-shadow: 0 0 10px #08ebfc;
-    }
 
     #home .home-content2 {
         position: absolute;
