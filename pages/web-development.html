@@ -105,7 +105,7 @@
             padding-bottom: 2vw;
         }
 
-                @media (max-width:480px) {
+        @media (max-width:480px) {
 
             #hero {
                 height: 100vh;
@@ -153,10 +153,10 @@
             .text2 p,
             .text3 p,
             .text4 p {
-                font-size: 2.5vw;
+                font-size: 3vw;
                 font-family: poppins, sans-serif;
                 text-align: justify;
-                line-height: 3.5vw;
+                line-height: 5vw;
                 color: #000;
                 margin: 3vw 0vw;
             }
@@ -165,12 +165,12 @@
             .text2 h1,
             .text3 h1,
             .text4 h1 {
-                font-size: 7vw;
+                font-size: 8vw;
                 font-family: poppins, sans-serif;
                 font-weight: 700;
                 text-align: left;
                 color: #030b61;
-                line-height: 7.5vw;
+                line-height: 8.5vw;
             }
 
             .text1,
@@ -251,33 +251,33 @@
     </section>
     <footer id="footer"></footer>
     <script>
-       fetch('/components/nav.html')
-        .then(res => res.text())
-        .then(data => {
-            document.querySelector("nav").innerHTML = data;
+        fetch('/components/nav.html')
+            .then(res => res.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
 
-            // Ab JS ko initialize karo
-            initNav();
-        });
-
-    // Function jo event listeners lagata hai
-    function initNav() {
-        const menu = document.querySelector('.mobile-res');
-        const openBtn = document.querySelector('.right-btn button');
-        const closeBtn = document.querySelector('.mobile-res .top i');
-
-        if (openBtn && closeBtn && menu) {
-            openBtn.addEventListener('click', () => {
-                menu.classList.add("show");
-                document.body.style.overflow = "hidden";
+                // Ab JS ko initialize karo
+                initNav();
             });
 
-            closeBtn.addEventListener('click', () => {
-                menu.classList.remove("show");
-                document.body.style.overflow = "";
-            });
+        // Function jo event listeners lagata hai
+        function initNav() {
+            const menu = document.querySelector('.mobile-res');
+            const openBtn = document.querySelector('.right-btn button');
+            const closeBtn = document.querySelector('.mobile-res .top i');
+
+            if (openBtn && closeBtn && menu) {
+                openBtn.addEventListener('click', () => {
+                    menu.classList.add("show");
+                    document.body.style.overflow = "hidden";
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    menu.classList.remove("show");
+                    document.body.style.overflow = "";
+                });
+            }
         }
-    }
 
         fetch('/components/footer.html')
             .then(req => req.text())
