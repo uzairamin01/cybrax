@@ -100,6 +100,89 @@
             margin-bottom: 6vw;
         }
 
+        @media (max-width:480px) {
+
+            #hero {
+                height: 100vh;
+                width: 100%;
+                position: relative;
+            }
+
+            nav.scrolled {
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+            }
+
+            #hero img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                filter: brightness(0.3);
+            }
+
+            #hero .text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: poppins, sans-serif;
+                width: 100%;
+                text-align: center;
+            }
+
+            .text h1 {
+                font-size: 12vw;
+                color: #ddd;
+                width: 100%;
+            }
+
+            .text p {
+                font-size: 2.5vw;
+                text-align: center;
+                color: #ddd;
+                margin-top: -0.5vw;
+            }
+
+            .text1 p,
+            .text2 p,
+            .text3 p,
+            .text4 p {
+                font-size: 2.5vw;
+                font-family: poppins, sans-serif;
+                text-align: justify;
+                line-height: 3.5vw;
+                color: #000;
+                margin: 3vw 0vw;
+            }
+
+            .text1 h1,
+            .text2 h1,
+            .text3 h1,
+            .text4 h1 {
+                font-size: 7vw;
+                font-family: poppins, sans-serif;
+                font-weight: 700;
+                text-align: left;
+                color: #030b61;
+                line-height: 7.5vw;
+            }
+
+            .text1,
+            .text2,
+            .text3,
+            .text4 {
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 2vw;
+                padding-top: 3vw;
+                width: 80%;
+                margin: auto;
+            }
+
+            .text3 {
+                border: none;
+                margin-bottom: 6vw;
+            }
+        }
     </style>
 </head>
 <nav id="nav"></nav>
@@ -154,10 +237,32 @@
     <footer id="footer"></footer>
     <script>
         fetch('/components/nav.html')
-            .then(req => req.text())
-            .then(data => {
-                document.querySelector('#nav').innerHTML = data
-            })
+        .then(res => res.text())
+        .then(data => {
+            document.querySelector("nav").innerHTML = data;
+
+            // Ab JS ko initialize karo
+            initNav();
+        });
+
+    // Function jo event listeners lagata hai
+    function initNav() {
+        const menu = document.querySelector('.mobile-res');
+        const openBtn = document.querySelector('.right-btn button');
+        const closeBtn = document.querySelector('.mobile-res .top i');
+
+        if (openBtn && closeBtn && menu) {
+            openBtn.addEventListener('click', () => {
+                menu.classList.add("show");
+                document.body.style.overflow = "hidden";
+            });
+
+            closeBtn.addEventListener('click', () => {
+                menu.classList.remove("show");
+                document.body.style.overflow = "";
+            });
+        }
+    }
 
         fetch('/components/footer.html')
             .then(req => req.text())

@@ -1,27 +1,30 @@
-fetch("/components/nav.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("nav").innerHTML = data;
+fetch('/components/nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.querySelector("nav").innerHTML = data;
 
-        // Set active class based on current page
-        const navItems = document.querySelectorAll('#nav ul li');
-        const pages = ['/index.html', '/pages/about.html', '/pages/service.html', '/pages/contact.html'];
-        let currentPage = window.location.pathname.split('/').pop();
-        if (currentPage === '' || currentPage === 'index.html') {
-            currentPage = 'index.html';
-        }
-
-        navItems.forEach((item, idx) => {
-            if (currentPage === pages[idx].split('/').pop()) {
-                item.classList.add('active');
-            }
-            item.addEventListener('click', () => {
-                navItems.forEach(li => li.classList.remove('active'));
-                item.classList.add('active');
-                window.location.href = pages[idx]
-            });
+            // Ab JS ko initialize karo
+            initNav();
         });
-    });
+
+    // Function jo event listeners lagata hai
+    function initNav() {
+        const menu = document.querySelector('.mobile-res');
+        const openBtn = document.querySelector('.right-btn button');
+        const closeBtn = document.querySelector('.mobile-res .top i');
+
+        if (openBtn && closeBtn && menu) {
+            openBtn.addEventListener('click', () => {
+                menu.classList.add("show");
+                document.body.style.overflow = "hidden";
+            });
+
+            closeBtn.addEventListener('click', () => {
+                menu.classList.remove("show");
+                document.body.style.overflow = "";
+            });
+        }
+    }
 
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');

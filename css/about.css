@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
     scroll-behavior: smooth;
     height: 100%;
     width: 100%;
@@ -20,19 +22,19 @@ body, html {
     background: rgba(0, 0, 0, 0.6);
 }
 
-nav.scrolled{
+nav.scrolled {
     background: rgb(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-}   
+}
 
-#hero{
+#hero {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-.bg{
+.bg {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -42,14 +44,14 @@ nav.scrolled{
     z-index: -1;
 }
 
-.bg img{
+.bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.3);
 }
 
-.hero-content{
+.hero-content {
     width: 50%;
     height: 40%;
     color: #fff;
@@ -62,14 +64,14 @@ nav.scrolled{
     transform: translate(-50%, -50%);
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 5rem;
     margin-bottom: 20px;
     font-weight: 700;
     font-family: poppins, sans-serif;
 }
 
-.hero-content p{
+.hero-content p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -79,7 +81,7 @@ nav.scrolled{
     margin-top: -2vw;
 }
 
-#main-first{
+#main-first {
     width: 100%;
     min-height: 50vh;
     background: #f7fafd;
@@ -89,7 +91,7 @@ nav.scrolled{
     position: relative;
 }
 
-.first-sec{
+.first-sec {
     height: 80vh;
     width: 100%;
     padding: 2vw;
@@ -99,16 +101,16 @@ nav.scrolled{
     padding-left: 6.5vw;
 }
 
-.top-left{
+.top-left {
     width: 100%;
 }
 
-.first-sec h1{
+.first-sec h1 {
     font-size: 3.5vw;
     color: #030b61
 }
 
-.first-sec h3{
+.first-sec h3 {
     font-size: 1.2vw;
     text-transform: uppercase;
     letter-spacing: 0.3vw;
@@ -121,40 +123,42 @@ nav.scrolled{
     padding-left: 2.3vw;
 }
 
-.b1, .b2{
+.b1,
+.b2 {
     width: 7%;
     height: 40%;
     background: #030b61;
     border-radius: 50%;
     position: absolute;
 }
-.b1{
+
+.b1 {
     left: 5%;
     top: 30%;
 }
 
-.b2{
+.b2 {
     right: 5%;
     top: 30%;
 }
 
-.first-sec p{
+.first-sec p {
     width: 30%;
 }
 
-.top-left{
+.top-left {
     width: 50%;
     padding: 1vw 0vw;
 }
 
-.top-left p{
+.top-left p {
     width: 100%;
     font-size: 1.3vw;
     line-height: 2.1vw;
     font-weight: 300;
 }
 
-.top-right{
+.top-right {
     height: 100%;
     width: 50%;
     padding-left: 10vw;
@@ -162,7 +166,7 @@ nav.scrolled{
     position: relative;
 }
 
-.top-right::before{
+.top-right::before {
     content: '';
     position: absolute;
     height: 65%;
@@ -172,102 +176,110 @@ nav.scrolled{
     left: 19%;
 }
 
-.exper, .proj, .satis{
+.exper,
+.proj,
+.satis {
     padding-bottom: 2vw;
     font-size: 2vw;
     position: relative;
 }
 
-.exper h5, .proj h5, .satis h5{
+.exper h5,
+.proj h5,
+.satis h5 {
     color: #030b61;
 }
 
 
-.exper::before{
+.exper::before {
     content: '10+';
 }
 
-.proj::before{
+.proj::before {
     content: '150+';
 }
 
-.satis::before{
+.satis::before {
     content: '110+';
 }
 
-#main-second{
+#main-second {
     min-height: 100vh;
     width: 100%;
     padding: 3vw;
-    background:  #f7fafd;
+    background: #f7fafd;
     font-family: poppins, sans-serif;
 }
 
-.sec-cont{
+.sec-cont {
     display: flex;
     flex-direction: column;
     padding-left: 6.5vw;
 }
 
-.cd .left{
+.cd .left {
     width: 60%;
 }
 
-.cd .right{
+.cd .right {
     width: 40%;
 }
 
-.cd img{
+.cd img {
     height: 40vh;
     width: 100%;
     object-fit: cover;
 }
 
 
-.cd{
+.cd {
     display: flex;
     justify-content: space-around;
     margin-top: 10vw;
     align-items: center;
 }
 
-.cd h1{
+.cd h1 {
     font-size: 4vw;
     color: #030b61;
 }
 
-.cd p{
+.cd p {
     width: 60%;
     font-size: larger;
 }
 
-.whyChooseUs, .getInTouch{
+.whyChooseUs,
+.getInTouch {
     flex-direction: row-reverse;
 }
 
-.whyChooseUs .left, .getInTouch .left{
+.whyChooseUs .left,
+.getInTouch .left {
     width: 40%;
     margin-left: 10%;
 }
 
-.whyChooseUs .left p, .getInTouch .left p{
+.whyChooseUs .left p,
+.getInTouch .left p {
     width: 100%;
 }
 
-.whyChooseUs .right, .getInTouch .right{
+.whyChooseUs .right,
+.getInTouch .right {
     width: 40%;
     margin-left: -4%;
 }
 
-.whatWeDo{
+.whatWeDo {
     margin-top: 0;
 }
 
-.getInTouch .left{
+.getInTouch .left {
     margin-top: -2vw;
 }
 
-.getInTouch button{
+.getInTouch button {
     padding: 11px 22px;
     font-size: 1.2vw;
     border: none;
@@ -276,4 +288,280 @@ nav.scrolled{
     border-radius: 10px;
     margin-top: 1vw;
     cursor: pointer;
+}
+
+@media (max-width:480px) {
+
+    .hero-content {
+        width: 50%;
+        height: 40%;
+        color: #fff;
+        text-align: center;
+        opacity: 0.9;
+        padding: 0 20px 0 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* background: #f7fafd; */
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-content h1 {
+        font-size: 16vw;
+        white-space: nowrap;
+        font-weight: 700;
+        font-family: poppins, sans-serif;
+    }
+
+    .hero-content p {
+        font-size: 4vw;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-weight: 100;
+        width: 100%;
+        font-family: poppins, sans-serif;
+        margin-top: -4vw;
+    }
+
+    #main-first {
+        width: 100%;
+        min-height: 65vh;
+        background: #f7fafd;
+        padding: 3vw;
+        position: relative;
+        font-family: poppins, sans-serif;
+        position: relative;
+    }
+
+    .first-sec {
+        min-height: 50vh;
+        width: 100%;
+        padding: 2vw;
+        position: relative;
+        font-family: poppins, sans-serif;
+        display: block;
+        padding-left: 6.5vw;
+        /* background: #800b; */
+    }
+
+    .top-left {
+        width: 100%;
+    }
+
+    .first-sec h1 {
+        font-size: 10vw;
+        color: #030b61;
+        width: 100%;
+        line-height: 10vw;
+        margin-top: 3vw;
+        font-weight: 800;
+    }
+
+    .first-sec h3 {
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        letter-spacing: 0.3vw;
+        background: #fff;
+        padding: 0.2vw;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 25vw;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        padding-left: 1vw;
+    }
+
+    .b1,
+    .b2 {
+        width: 7%;
+        height: 40%;
+        background: #030b61;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .b1 {
+        left: 5%;
+        top: 30%;
+    }
+
+    .b2 {
+        right: 5%;
+        top: 30%;
+    }
+
+    .first-sec p {
+        width: 30%;
+    }
+
+    .top-left {
+        width: 100%;
+        padding: 1vw 0vw;
+    }
+
+    .top-left p {
+        width: 100%;
+        font-size: 3vw;
+        line-height: 4vw;
+        font-weight: 500;
+        margin-top: 2vw;
+        text-align: justify;
+    }
+
+    .top-right {
+        height: 40%;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vw;
+        /* background: #810b; */
+        justify-content: space-between;
+        padding: 2vw;
+        gap: 3vw;
+    }
+
+    .top-right::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0.3vw;
+        border-radius: 10px;
+        background: #030b61;
+        left: 0%;
+    }
+
+    .exper,
+    .proj,
+    .satis {
+        padding-bottom: 4vw;
+        font-size: 7vw;
+        position: relative;
+    }
+
+    .exper h5,
+    .proj h5,
+    .satis h5 {
+        color: #030b61;
+        font-size: 5vw;
+        line-height: 3.2vw;
+        font-weight: 300;
+    }
+
+
+    .exper::before {
+        content: '10+';
+        font-weight: 500;
+    }
+
+    .proj::before {
+        content: '150+';
+        font-weight: 500;
+    }
+
+    .satis::before {
+        content: '110+';
+        font-weight: 500;
+    }
+
+    #main-second {
+        min-height: 100vh;
+        width: 100%;
+        padding: 3vw;
+        background: #f7fafd;
+        font-family: poppins, sans-serif;
+    }
+
+    .sec-cont {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2vw;
+    }
+
+    .cd .left {
+        width: 100%;
+    }
+
+    .cd .right {
+        width: 100%;
+    }
+
+    .cd img {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+        margin-top: 2vw;
+        border-radius: 5%;
+    }
+
+
+    .cd {
+        display: block;
+        justify-content: space-around;
+        margin: 15vw 0vw;
+        align-items: center;
+    }
+
+    .cd h1 {
+        font-size: 10vw;
+        text-align: center;
+        width: 100%;
+        /* background: #080b;    */
+        color: #030b61;
+    }
+
+    .cd p {
+        width: 100%;
+        font-size: 4vw;
+        margin: 2vw 0vw 0vw 0vw;
+        text-align: justify;
+        font-weight: 300;
+    }
+
+    
+
+    .whyChooseUs,
+    .getInTouch {
+        flex-direction: none;
+    }
+
+    .whyChooseUs .left,
+    .getInTouch .left {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .whyChooseUs .left p,
+    .getInTouch .left p {
+        width: 100%;
+    }
+
+    .whyChooseUs .right,
+    .getInTouch .right {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .whatWeDo {
+        margin-top: 10vw;
+    }
+
+    .getInTouch .left {
+        margin-top: -2vw;
+        
+    }
+
+    .getInTouch button {
+        padding: 11px 22px;
+        font-size: 4vw;
+        border: none;
+        background: #030b61;
+        color: #f7fafd;
+        border-radius: 10px;
+        margin-top: 3vw;
+        cursor: pointer;
+        
+    }
 }
