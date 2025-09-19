@@ -1300,10 +1300,10 @@ nav.scrolled {
     }
 
     .slider-top img {
-        width: 35vw;
-        height: 15vh;
+        width: 38vw;
+        height: 18vh;
         object-fit: cover;
-        border-radius: 20%;
+        border-radius: 50%;
         margin: 5vw 0vw 0vw 0vw;
     }
 
