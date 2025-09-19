@@ -1504,8 +1504,8 @@ nav.scrolled {
 
     .contact-form button {
         position: absolute;
-        bottom: 3%;
-        width: 87%;
+        bottom: 1%;
+        width: 95%;
         height: 10%;
         cursor: pointer;
         font-size: 4vw;
