@@ -1301,10 +1301,10 @@ nav.scrolled {
 
     .slider-top img {
         width: 35vw;
-        height: 20vh;
+        height: 15vh;
         object-fit: cover;
         border-radius: 50%;
-        margin: 1vw 0vw;
+        margin: 5vw 0vw 0vw 0vw;
     }
 
     .slider-para {
@@ -1350,7 +1350,7 @@ nav.scrolled {
         font-size: 20vw;
         color: #030b61;
         position: absolute;
-        top: 38%;
+        top: 28%;
         left: 7%;
         opacity: 0.8;
     }
