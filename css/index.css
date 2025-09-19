@@ -1303,7 +1303,7 @@ nav.scrolled {
         width: 35vw;
         height: 15vh;
         object-fit: cover;
-        border-radius: 50%;
+        border-radius: 20%;
         margin: 5vw 0vw 0vw 0vw;
     }
 
