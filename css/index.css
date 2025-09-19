@@ -785,7 +785,7 @@ nav.scrolled {
 
     #home .home-content {
         position: absolute;
-        top: 40%;
+        top: 43%;
         left: 50%;
         transform: translate(-50%, -50%) rotateY(0deg);
         text-align: center;
@@ -797,12 +797,12 @@ nav.scrolled {
     }
 
     #home .home-content h1 {
-        font-size: 10vw;
+        font-size: 7vw;
         font-family: Poppins, sans-serif;
         font-weight: 900;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 11vw;
+        line-height: 9vw;
         text-transform: capitalize;
     }
 
@@ -897,11 +897,12 @@ nav.scrolled {
     }
 
     #home .home-content2 h1 {
-        font-size: 9vw;
+        font-size: 8vw;
         font-weight: 900;
         margin-bottom: 5px;
         text-align: center;
-        line-height: 10vw;
+        line-height: 8vw;
+        width: 100%;
         font-family: poppins, sans-serif;
 
     }
@@ -909,10 +910,10 @@ nav.scrolled {
     #home .home-content2 p {
         font-size: 3vw;
         font-family: sans-serif;
-        font-weight: 400;
+        font-weight: 500;
         margin-bottom: 20px;
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         text-align: center;
 
     }
