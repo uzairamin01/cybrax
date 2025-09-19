@@ -58,28 +58,40 @@ window.addEventListener('scroll', function () {
     }
 });
 
-var swiper = new Swiper(".mySwiper", {
-     slidesPerView: 3,
-    spaceBetween: 50,
-    freeMode: true,
-    loop: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    breakpoints: {
-        // when window width is <= 499px
-        479: {
-            slidesPerView: 1,
-            spaceBetweenSlides: 30
-        },
-        // when window width is <= 999px
-        999: {
-            slidesPerView: 2,
-            spaceBetweenSlides: 40
-        }
+const swiper = new Swiper('.swiper', {
+  // Default Swiper parameters for all screen sizes
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Breakpoints for responsive behavior
+  breakpoints: {
+    // When window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
-
-    
+    // When window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    // When window width is >= 1024px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      // You can also disable or enable modules based on breakpoints
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        enabled: true, // Enable navigation for larger screens
+      },
+      pagination: {
+        enabled: false, // Disable pagination for larger screens
+      },
+    },
+  },
 });
+
+
 
 let nextBtn = document.querySelector("#review .review-top .revtop-right .next").addEventListener("click", () => {
     swiper.slideNext()
