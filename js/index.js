@@ -71,11 +71,11 @@ const swiper = new Swiper('.swiper', {
     },
     // When window width is >= 768px
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
     },
     // When window width is >= 1024px
-    1024: {
+    1025: {
       slidesPerView: 4,
       spaceBetween: 40,
       // You can also disable or enable modules based on breakpoints
