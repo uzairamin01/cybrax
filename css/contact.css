@@ -209,7 +209,7 @@ iframe {
     }
 
     #sec {
-        min-height: 130vh;
+        min-height: 140vh;
         width: 90%;
         display: block;
         background: #f7fafd;
@@ -236,7 +236,7 @@ iframe {
         margin-left: 0vw;
         padding-top: 8vw;
         /* background: #000; */
-        height: 50vh;
+        height: 70vh;
     }
 
     .form-cont h1 {
@@ -282,13 +282,14 @@ iframe {
         width: 95%;
         resize: none;
         border-radius: 4px;
-        padding: 3vw;
+        padding: 3vw 3vw;
         margin-bottom: 1vw;
         background: #030b61;
         font-size: 3vw;
         font-weight: 500;
         outline: none;
         color: #ddd;
+        height: 20%;
     }
 
     .form-cont button {
@@ -336,6 +337,9 @@ iframe {
 
     .link a {
         text-decoration: none;
+    }
+    footer{
+        margin-top: 5vw;
     }
 
 }
