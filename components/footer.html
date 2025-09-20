@@ -188,11 +188,11 @@
                 <div class="footer-col">
                     <h5 class="footer-heading">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="home.html" class="footer-link"><i class="las la-angle-right"></i> Home</a></li>
-                        <li><a href="about.html" class="footer-link"><i class="las la-angle-right"></i> About</a></li>
-                        <li><a href="services.html" class="footer-link"><i class="las la-angle-right"></i> Services</a>
+                        <li><a href="/index.html" class="footer-link"><i class="las la-angle-right"></i> Home</a></li>
+                        <li><a href="/pages/about.html" class="footer-link"><i class="las la-angle-right"></i> About</a></li>
+                        <li><a href="/pages/service.html" class="footer-link"><i class="las la-angle-right"></i> Services</a>
                         </li>
-                        <li><a href="contact.html" class="footer-link"><i class="las la-angle-right"></i> Contact</a>
+                        <li><a href="/pages/service.html" class="footer-link"><i class="las la-angle-right"></i> Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -202,13 +202,13 @@
                     <ul class="footer-contact">
                         <li><i class="las la-map-marker"></i> 123 Street, City, Country</li>
                         <li><i class="las la-phone"></i> +92 300 1234567</li>
-                        <li><i class="las la-envelope"></i> info@astratech.om</li>
+                        <li><i class="las la-envelope"></i> info@cybrax.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-copyright">
                 <small>
-                    © <span class="year">2025</span> AstraTech. All rights reserved.
+                    © <span class="year">2025</span> Cybrax. All rights reserved.
                 </small>
             </div>
         </div>
@@ -218,26 +218,7 @@
     <script>
 
         document.getElementsByClassName("year").innerHTML = new Date().getFullYear();
-
-
-        // Animate footer links on scroll (optional)
-        document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            });
-
-            document.querySelectorAll('.footer-link').forEach((element) => {
-                element.style.opacity = 0;
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'all 0.5s ease';
-                observer.observe(element);
-            });
-        });
+        
     </script>
 </body>
 

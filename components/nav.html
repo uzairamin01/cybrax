@@ -243,6 +243,100 @@
                 font-size: 5vw;
             }
         }
+
+        @media (min-width: 480px) and (max-width: 1024px) {
+            nav .menu-char,
+            .nav-btn {
+                display: none;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0vw 10vw;
+            }
+
+            nav .logo {
+                width: 50%;
+                display: flex;
+                align-items: center;
+            }
+
+            nav .logo img {
+                width: 30%;
+                height: 60%;
+                object-fit: cover;
+            }
+
+            nav .logo h3 {
+                font-size: 5vw;
+                font-weight: 300;
+                margin-left: 5px;
+                color: #08ebfc;
+                font-family: poppins, sans-serif;
+                letter-spacing: 0.4vw;
+            }
+
+            .right-btn {
+                display: block;
+            }
+
+            .right-btn button {
+                background: none;
+                border: none;
+                font-size: 5vw;
+                color: #08ebfc;
+            }
+
+            .mobile-res {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 50vh;
+                /* 👈 half screen tak hi chahiye */
+                width: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+
+            .mobile-res.show {
+                transform: translateY(0);
+            }
+
+            .mobile-res .top {
+                display: flex;
+                justify-content: flex-end;
+                margin: 6vw 10vw;
+                color: #08ebfc;
+                font-size: 6vw;
+            }
+
+            .mobile-res .bottom ul {
+                list-style: none;
+                padding: 0;
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .mobile-res .bottom ul li {
+                margin: 15px 0;
+            }
+
+            .mobile-res .bottom ul li a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 5vw;
+            }
+        }
+        
     </style>
 
     <nav>
