@@ -232,27 +232,26 @@ iframe {
     .form-cont {
         display: flex;
         flex-direction: column;
-        padding: 2vw 1vw;
+        padding: 2vw 2vw;
         margin-left: 0vw;
-        padding-top: 6vw;
+        padding-top: 8vw;
         /* background: #000; */
         height: 50vh;
-        background: rgba(232, 236, 240, 0.232);
-        box-shadow: 0 4px 10px rgba(1, 9, 66, 0.25);
     }
 
     .form-cont h1 {
         font-size: 12vw;
         color: #030b61;
-        line-height: 5vw;
+        line-height: 12vw;
     }
     
     .form-cont p {
         font-size: 3vw;
-        line-height: 4vw;
+        line-height: 4.5vw;
         width: 100%;
         padding-top: 3vw;
-        margin-bottom: 2vw
+        margin-bottom: 2vw;
+        text-align: center;
     }
     
     .form-cont label {
@@ -275,7 +274,7 @@ iframe {
         color: #ddd;
     }
 
-    .form-cont input::placeholder {
+    .form-cont input::placeholder, .form-cont textarea::placeholder {
         color: #ddd;
     }
 
