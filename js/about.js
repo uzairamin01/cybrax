@@ -428,7 +428,7 @@ mm.add("(max-width: 768px)", () => {
         duration: 0.6,
         stagger: 0.15,
         scrollTrigger: {
-            trigger: '.cd',
+            trigger: '#main-first',
             start: 'top 90%',
             markers: true,
         }
