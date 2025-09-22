@@ -11,6 +11,7 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 #nav {
@@ -192,15 +193,15 @@ nav.scrolled {
 
 
 .exper::before {
-    content: '10+';
+    content: attr(data-count);
 }
 
 .proj::before {
-    content: '150+';
+    content: attr(data-count);
 }
 
 .satis::before {
-    content: '110+';
+    content: attr(data-count);
 }
 
 #main-second {
@@ -229,6 +230,7 @@ nav.scrolled {
     height: 40vh;
     width: 100%;
     object-fit: cover;
+    margin-left: -10%;   
 }
 
 
@@ -247,6 +249,7 @@ nav.scrolled {
 .cd p {
     width: 60%;
     font-size: larger;
+    text-align: justify;
 }
 
 .whyChooseUs,
@@ -257,7 +260,7 @@ nav.scrolled {
 .whyChooseUs .left,
 .getInTouch .left {
     width: 40%;
-    margin-left: 10%;
+    margin-left: -10%;
 }
 
 .whyChooseUs .left p,
@@ -268,12 +271,14 @@ nav.scrolled {
 .whyChooseUs .right,
 .getInTouch .right {
     width: 40%;
-    margin-left: -4%;
+    margin-left: -5%;
 }
 
 .whatWeDo {
     margin-top: 0;
 }
+
+.whatWeDo img, .acheivments img{}
 
 .getInTouch .left {
     margin-top: -2vw;
@@ -453,17 +458,17 @@ nav.scrolled {
 
 
     .exper::before {
-        content: '10+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
     .proj::before {
-        content: '150+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
     .satis::before {
-        content: '110+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
@@ -730,17 +735,17 @@ nav.scrolled {
 
 
     .exper::before {
-        content: '10+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
     .proj::before {
-        content: '150+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
     .satis::before {
-        content: '110+';
+        content: attr(data-count);
         font-weight: 500;
     }
 
