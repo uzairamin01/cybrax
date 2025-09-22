@@ -422,16 +422,4 @@ mm.add("(max-width: 768px)", () => {
         }
     });
 
-    gsap.from('.cd', {
-        y: 30,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
-        scrollTrigger: {
-            trigger: '#main-first',
-            start: 'top 90%',
-            markers: true,
-        }
-    });
-
 });
