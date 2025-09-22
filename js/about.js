@@ -409,7 +409,7 @@ mm.add("(max-width: 768px)", () => {
         opacity: 0,
         duration: 0.8,
         scrollTrigger: {
-            trigger: '#main-first',
+            trigger: '.first-sec',
             start: 'top 90%'
         }
     });
@@ -419,7 +419,7 @@ mm.add("(max-width: 768px)", () => {
         opacity: 0,
         duration: 0.6,
         scrollTrigger: {
-            trigger: '#main-first',
+            trigger: '.first-sec',
             start: 'top 90%',
         }
     });
@@ -429,7 +429,7 @@ mm.add("(max-width: 768px)", () => {
         opacity: 0,
         duration: 0.7,
         scrollTrigger: {
-            trigger: '#main-first',
+            trigger: '.first-sec',
             start: 'top 90%'
         }
     });
@@ -439,7 +439,7 @@ mm.add("(max-width: 768px)", () => {
         opacity: 0,
         duration: 0.6,
         scrollTrigger: {
-            trigger: '#main-first',
+            trigger: '.first-sec',
             start: 'top 90%'
         }
     });
