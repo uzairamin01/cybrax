@@ -230,7 +230,6 @@ nav.scrolled {
     height: 40vh;
     width: 100%;
     object-fit: cover;
-    margin-left: -10%;   
 }
 
 
@@ -260,7 +259,7 @@ nav.scrolled {
 .whyChooseUs .left,
 .getInTouch .left {
     width: 40%;
-    margin-left: -10%;
+    margin-left: 10%;
 }
 
 .whyChooseUs .left p,
@@ -271,14 +270,12 @@ nav.scrolled {
 .whyChooseUs .right,
 .getInTouch .right {
     width: 40%;
-    margin-left: -5%;
+    margin-left: -4%;
 }
 
 .whatWeDo {
     margin-top: 0;
 }
-
-.whatWeDo img, .acheivments img{}
 
 .getInTouch .left {
     margin-top: -2vw;
