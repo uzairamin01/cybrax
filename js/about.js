@@ -35,12 +35,41 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Refresh ScrollTrigger after critical events to fix offset issues on mobile
+window.addEventListener('load', () => {
+    if (window.ScrollTrigger) ScrollTrigger.refresh(true);
+});
+
+// Refresh after images load (hero and content images)
+document.querySelectorAll('img').forEach((img) => {
+    if (!img.complete) {
+        img.addEventListener('load', () => {
+            if (window.ScrollTrigger) ScrollTrigger.refresh(true);
+        }, { once: true });
+    }
+});
+
 fetch("/components/footer.html")
     .then(response => response.text())
-    .then(data =>
-        document.getElementById("footer").innerHTML = data);
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        if (window.ScrollTrigger) ScrollTrigger.refresh(true);
+    });
 
 
+
+// Ensure GSAP plugins and mobile scroll normalization
+if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    if (ScrollTrigger.normalizeScroll) {
+        ScrollTrigger.normalizeScroll(true);
+    }
+    ScrollTrigger.defaults({
+        once: true,
+        markers: false,
+        invalidateOnRefresh: true
+    });
+}
 
 function numCounter() {
     function animateCounter(element, targetValue, duration = 2) {
@@ -387,7 +416,7 @@ mm.add("(max-width: 768px)", () => {
         duration: 0.6,
         scrollTrigger: {
             trigger: '#main-first',
-            start: 'top 90%'
+            start: 'top 90%',
         }
     });
 
