@@ -5,6 +5,8 @@ fetch('/components/nav.html')
 
         // Ab JS ko initialize karo
         initNav();
+
+        if (window.ScrollTrigger) ScrollTrigger.refresh(true);
     });
 
 // Function jo event listeners lagata hai
@@ -35,6 +37,11 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Ensure ScrollTrigger plugin is registered
+if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+}
+
 // Refresh ScrollTrigger after critical events to fix offset issues on mobile
 window.addEventListener('load', () => {
     if (window.ScrollTrigger) ScrollTrigger.refresh(true);
@@ -49,6 +56,14 @@ document.querySelectorAll('img').forEach((img) => {
     }
 });
 
+// Refresh on orientation change / resize for mobile correctness
+window.addEventListener('orientationchange', () => {
+    if (window.ScrollTrigger) ScrollTrigger.refresh(true);
+});
+window.addEventListener('resize', () => {
+    if (window.ScrollTrigger) ScrollTrigger.refresh(true);
+});
+
 fetch("/components/footer.html")
     .then(response => response.text())
     .then(data => {
@@ -58,18 +73,7 @@ fetch("/components/footer.html")
 
 
 
-// Ensure GSAP plugins and mobile scroll normalization
-if (window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-    if (ScrollTrigger.normalizeScroll) {
-        ScrollTrigger.normalizeScroll(true);
-    }
-    ScrollTrigger.defaults({
-        once: true,
-        markers: false,
-        invalidateOnRefresh: true
-    });
-}
+
 
 function numCounter() {
     function animateCounter(element, targetValue, duration = 2) {
