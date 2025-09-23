@@ -157,7 +157,20 @@ mm.add("(min-width: 1025px)", () => {
 });
 
 mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
+  tl.from('#nav', {
+    y: -100,
+    duration: 0.6,
+  })
   
+  tl.from('.hero-content h1', {
+    y: -50,
+    opacity: 0,
+  })
+  
+  tl.from('.hero-content p', {
+    y: 50,
+    opacity: 0,
+  })
 });
 
 mm.add("(max-width: 768px)", () => {
