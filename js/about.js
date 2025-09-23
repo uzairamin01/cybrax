@@ -38,9 +38,8 @@ fetch('/components/footer.html')
     document.querySelector('#footer').innerHTML = data
   });
 
-
-
 let mm = gsap.matchMedia();
+let tl = gsap.timeline();
 
 mm.add("(min-width: 1025px)", () => {
   const tl = gsap.timeline();
@@ -157,27 +156,23 @@ mm.add("(min-width: 1025px)", () => {
   });
 });
 
+mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
+  
+});
 
-
-function animateCounter(element, targetValue, duration) {
-  const obj = { value: 0 };
-  gsap.to(obj, {
-    value: targetValue,
-    duration: duration,
-    ease: 'power2.out',
-    onUpdate: function () {
-      element.setAttribute('data-count', Math.round(obj.value) + '+');
-    }
-  });
-}
-
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.top-left',
-    start: 'top 60%'
-  }
-})
-  .call(() => animateCounter(document.querySelector('.exper'), 10, 1.2))
-  .call(() => animateCounter(document.querySelector('.proj'), 150, 1.5))
-  .call(() => animateCounter(document.querySelector('.satis'), 110, 1.3));
-
+mm.add("(max-width: 768px)", () => {
+  tl.from('#nav', {
+    y: -100,
+    duration: 0.6,
+  })
+  
+  tl.from('.hero-content h1', {
+    y: -50,
+    opacity: 0,
+  })
+  
+  tl.from('.hero-content p', {
+    y: 50,
+    opacity: 0,
+  })
+});
